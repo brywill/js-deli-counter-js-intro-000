@@ -15,3 +15,18 @@ function nowServing(katzDeliLine) {
   katzDeliLine.shift()
   return msg
 }
+
+function currentLine(katzDeliLine) {
+  var msg
+  var lineNumbers = []
+  
+  if (katzDeliLine.length === 0) {
+    msg = "The line is currently empty."
+  } else {
+    for (let i = 0; i < katzDeliLine.length; i++) {
+      lineNumbers.push([i+1] + "." + " katzDeliLine[i]")
+    }
+    msg = "The line is currently: " + lineNumbers.toString()
+  }
+  return msg
+}
