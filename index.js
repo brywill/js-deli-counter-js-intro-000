@@ -26,7 +26,7 @@ function currentLine(katzDeliLine) {
     for (let i = 0; i < katzDeliLine.length; i++) {
       lineNumbers.push([i+1] + "." + " " + katzDeliLine[i])
     }
-    msg = "The line is currently: " + lineNumbers.toString()
+    msg = "The line is currently: " + lineNumbers.join(", ")
   }
   return msg
 }
